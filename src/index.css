@@ -1,13 +1,965 @@
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: ibmplexsans,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  letter-spacing: 0.00025em;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+/*-----Start Nav-----*/
+.navBackground {
+  position: sticky;
+  z-index: 1;
+  width: 100%;
+  background-color:  #0b65c6!important;
+}
+div.nav {
+  display: table;
+  width: calc(100% - 4em);
+  max-width: 1000px;
+
+  margin: auto;
+  padding: 1.25rem 20px;
+
+  background-color:  #0b65c6!important;
+}
+
+div.nav > * {
+  display: table-cell;
+  vertical-align: middle;
+
+  font-weight: 450;
+}
+
+div.siteId {
+  display: table;
+
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+div.siteId > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.siteId h1 {
+  padding-left: .5em;
+  color: white;
+
+  font-size: 20px;
+  line-height: 0.025rem;
+}
+
+.siteLogoFrame {
+  display: inline-block;
+  max-width:36px;
+  min-width: 30px;
+}
+.siteLogoFrame > img {
+  width: 100%;
+}
+
+.menusSign {
+  visibility: hidden;
+}
+
+.menus {
+  text-align: right;
+}
+.mobileMenus {
+  visibility: hidden;
+  position: absolute;
+
+}
+
+.menus > a {
+  padding: 1.5em;
+
+  text-decoration: none;
+  font-size: .9375rem!important;
+  font-weight: 200px;
+  color: white;
+}
+
+.menus > a:hover {
+  color: rgba(255,255,255,.75)!important;
+}
+
+.menuMeta {
+  background-color: #08a78e;
+  padding-right: .5rem!important;
+  padding-left: .5rem!important;
+  padding-bottom: .075em!important;
+  padding-top: .0 5em!important;
+
+  border-radius: .375rem;
+
+  margin-left: .5rem!important;
+
+  font-size: .8375rem;
+
+  position: relative;
+  top: .05em;
+}
+
+/*-----End Nav-----*/
+
+/*-----Start AppPreview-----*/
+.appPreviewBackground {
+  width: 100%;
+
+  background-image: linear-gradient(to bottom right,#0B65C6 50%,#105BAA 100%);
+}
+
+.appPreview {
+  display: table;
+  width: 100%;
+  max-width: 1000px;
+
+  margin: auto;
+
+  background-image: linear-gradient(to bottom right,#0B65C6 50%,#105BAA 100%);
+}
+
+.appPreview > * {
+  display: table-cell;
+  
+  vertical-align: middle;
+}
+
+.appPreview > .previewPic {
+  text-align: right;
+}
+
+.previewPic {
+  max-width: 50%;
+}
+.previewPic > img {
+  width: 100%;
+
+  position: relative;
+  left:25%;
+  bottom: -30px;
+}
+
+.previewPicLeft > img {
+  position: relative;
+
+  width: 100%;
+
+  position: relative;
+  left:-7.5%;
+  bottom: -30px;
+}
+
+.previewText {
+  width: 52;
+}
+.previewText h2 {
+  position: relative;
+  width: 120%;
+
+  margin-top: 0;
+  margin-bottom: .5rem;
+
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  font-weight: 700!important;
+  font-size: 3rem;
+
+  font-family: ibmplexsans,sans-serif;
+
+  color: white;
+}
+
+.previewBody {
+  position: relative;
+  width: 120%;
+  
+  color: rgba(255,255,255,.75)!important;
+  margin-bottom: 1rem!important;
+  font-size: 1.3125rem;
+  font-weight: 400;
+}
+
+.previewBtns {
+  position: relative;
+  width: 150%;
+}
+.previewBtn {
+  display: inline-block;
+  position: relative;
+}
+
+.previewBtn + .previewBtn {
+  margin-left: .5rem;
+}
+
+.previewBtn > .aImgageFrame {
+  display: inline-block;
+  max-width: 160px;
+  margin: 10px auto;
+}
+
+.previewBtn > .aImgageFrame img {
+  width: 100% ;
+}
+
+
+.whiteBack {
+  background-color: white;
+  background-image: none;
+}
+
+.whiteBack .previewPic > img {
+  width: 100%;
+
+  position: static;
+}
+
+.whiteBack h2 {
+  color: black;
+}
+
+.whiteBack .previewText h2 {
+  position: relative;
+  width: 100%;
+}
+
+.whiteBack .previewBody {
+  color: #4f5a65!important;
+  width: 100%;
+}
+
+.whiteBack .previewBtns {
+  position: relative;
+  width: 100%;
+}
+/*-----End AppPreview-----*/
+
+/*-----Start DownloadBtn-----*/
+a.downloadBtn {
+  display: inline-block;
+  font-weight: 600;
+
+  background-color: #0b65c6;
+  border-color: transparent!important;
+
+  margin-top: 2rem!important;
+
+  text-decoration: none;
+  color: white;
+  margin-left: auto!important;
+  margin-right: auto!important;
+
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  border: 1px solid transparent;
+  padding: .8125rem 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  border-radius: .375rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+a.downloadBtn:hover {
+  background-color: #0953a2;
+}
+/*-----End DownloadBtn-----*/
+
+/*-----Start Steps----*/
+.steps {
+  text-align: center;
+
+  max-width: 1000px;
+  margin: auto;
+}
+.steps > h2 {
+  color: #161c2d;
+  margin: 0;
+  font-family: ibmplexsans,sans-serif;
+  font-size: 2.6875rem;
+  line-height: 1.2;
+  font-weight: 700!important;
+
+  margin-bottom: 1rem!important;
+}
+
+.steps .stepsSentence {
+  margin-top: 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  color: #4f5a65!important;
+  margin-bottom: 1rem;  
+}
+
+.steps .step + .step {
+  margin-left: 5rem;
+}
+
+.steps ul {
+  display: table;
+  width: 100%;
+  list-style: none;
+}
+
+.steps ul > li {
+  display: table-cell;
+}
+
+.steps span.stepPic {
+  display: inline-block;
+  max-width: 7.6rem;
+
+}
+.steps span.stepPic > img {
+  width: 100%;
+}
+
+.steps .step {
+    position: relative;
+    text-align: left;
+}
+
+.steps .step > span {
+  display: inline-block;
+  text-align: center;
+}
+
+.steps .stepText {
+  font-weight: 700!important;
+  line-height: 1.4;
+  letter-spacing: -.01em;
+  font-size: 1.3125rem;
+  margin-bottom: .5rem;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+/*-----End Steps-----*/
+.appPreview {
+  padding-top: 3rem!important;
+}
+/*-----Start Home-----*/
+.activities {
+  display: table;
+
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+
+  padding-top: 2rem!important;
+}
+.activities > * {
+  display: table-cell;
+  text-align: left;
+
+  width: auto;
+}
+
+.activity3 {
+  text-align: right;
+}
+
+.activity > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.activityPicFrame {
+  max-width: 1.5rem;
+}
+.activityPicFrame > img {
+  width: 100%;
+}
+
+h3.activiyName {
+  margin-left: 1rem;
+
+  font-weight: 700!important;
+  font-size: 1.3125rem;
+}
+
+.featuresList {
+  text-align: center;
+}
+
+.featuresList h2.listTitle {
+  color: #161c2d;
+  margin: 0;
+  font-family: ibmplexsans,sans-serif;
+  font-size: 2.6875rem;
+  line-height: 1.2;
+  font-weight: 700!important;
+
+  margin-bottom: 1rem!important;
+}
+
+.featuresList .intro {
+  margin-top: 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  color: #4f5a65!important;
+  margin-bottom: 1rem;
+}
+
+.featuresList .lists {
+  max-width: 1000px;
+  margin: auto;
+
+  display: table;
+  width: 100%;
+  
+}
+
+.featuresList .lists > * {
+  display: table-cell;
+  text-align: left;
+}
+
+.featuresList .list1 {
+  margin-left: 0;
+  padding-left: 0;
+}
+.featuresList .list1 {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.featuresList ul {
+  list-style: none;
+
+}
+
+.featuresList ul > li {
+  border-top-left-radius: .375rem;
+  border-top-right-radius: .375rem;
+
+  background-color: #fff;
+  border: 1px solid #f1f4f8;
+  box-sizing: border-box;
+  padding: 1.5rem 2rem;
+}
+
+.featuresList ul > li + li {
+  border-top: none;
+}
+
+.featuresList .featureName {
+  padding-left: 1rem!important;
+}
+
+
+li.feature {
+  display: table;
+  width: 100%;
+}
+.featuresList .feature > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.mobilePreviewDisplay {
+  visibility: hidden;
+  position: absolute;
+}
+/*----End Home-----*/
+
+/*-----Start Footer-----*/
+
+.footer {
+  margin: auto;
+  margin-top: 5rem!important;
+  height: fit-content;
+}
+
+.footer .appAdvertBack {
+  background-color: #f9fbfd!important;
+}
+
+.footer .appAdvert {
+  max-width: 1000px;
+
+  display: table;
+
+  width: 100%;
+  margin: auto;
+
+  padding-bottom: 3rem!important;
+  padding-top: 3rem!important;
+}
+.footer .appAdvert > * {
+  display: table-cell;
+
+  vertical-align: middle;
+}
+
+.footer .advertText .topicSent{
+
+  font-weight: 700!important;
+  line-height: 1.4;
+  letter-spacing: -.01em;
+  font-size: 1.3125rem;
+  margin-bottom: .5rem;
+  font-weight: 400;
+  margin-top: 0;
+   
+}
+
+.footer .advertText .subOrdinateSent {
+  color: #4f5a65!important;
+  margin-bottom: 0!important;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+.footer .advertImg + .advertImg {
+  margin-left: 2.5rem;
+}
+
+.footer .appLinks {
+  text-align: right;
+}
+
+.footer .information {
+  display: table;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: auto;
+}
+
+.footer .information > * {
+  display: table-cell;
+}
+
+.footer .information > * + * {
+  padding-left: 1rem;
+}
+
+
+.footer .siteLogoFrame > img {
+  width: 100%;
+} 
+
+.footer .siteId {
+  width: fit-content;
+}
+.footer .siteLogoFrame {
+  display: inline-block;
+}
+.footer .siteTitle {
+  color: rgb(51, 117, 187);
+}
+
+.socials {
+  margin-top: 1.5rem;
+}
+
+.footer .socialLogo {
+  display: inline-block;
+  max-width: 20px;
+}
+.footer .socialLogo > img {
+  width: 100%;
+}
+.footer .socialLogo + * {
+  margin-left: 1rem;
+}
+
+.footerLists {
+  display: table;
+}
+.footerLists > * {
+  display: table-cell;
+}
+
+.footerLists > * + * {
+  padding-left: 3rem;
+}
+
+.footerList > * {
+  display: block;
+}
+
+.footerList h4 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+
+  color: #4f5a65!important;
+  letter-spacing: .08em;
+  font-weight: 700!important;
+  text-transform: uppercase!important;
+}
+
+.footerList a {
+  margin-bottom: 1.5em;
+  
+  color: #4f5a65!important;
+  text-decoration: none;
+}
+
+.footerList a:hover {
+  text-decoration: underline;
+}
+
+/*-----End Footer-----*/
+
+@media screen and (max-width: 910px) {
+  /*-----Start Navigation-----*/
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  div.nav {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .siteLogoFrame > img {
+    width: 100%;
+  }
+
+  .menusSign {
+    visibility: visible;
+    text-align: right;
+
+    color: white;
+    font-size: 2rem;
+  }
+
+  .menus {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .mobileMenus {
+
+
+    margin: auto;
+    width: calc(100% - 4em);
+
+
+
+    border-radius: 6px;
+    background-color: white;
+
+
+    color: black;
+    text-align: left;
+  }
+  .menus a {
+    display: block;
+    color: #4f5a65;
+
+  }
+  .menus a + a {
+    border-top: 1px solid #f1f4f8;
+  }
+
+  .menus .menuMeta {
+    color: white;
+  }
+
+  /*-----End Navigation-----*/
+
+  /*-----Start AppPreview-----*/
+
+  /*-----End AppPreview-----*/
+  
+  /*-----Start Home-----*/
+  .homeBody {
+    padding: 1.25rem 20px;
+    padding-top: 0;
+    width: calc(100% - 4em);
+
+    margin: auto;
+  }
+
+  .blackBackPreview {
+    display: block;
+    text-align: center;
+
+    padding-top: 4rem;
+  }
+  .blackBackPreview > * {
+    display: block;
+  }
+  
+  .blackBackPreview .previewText h2  {
+    text-align: left;
+    width: 90%;
+    font-size: 2.25rem;
+
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  .blackBackPreview .previewBody {
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 90%;
+
+    margin: auto;
+
+    text-align: left;
+    color: rgba(255,255,255,.75)!important;
+    font-size: 1.1875rem;
+  }
+
+  .blackBackPreview .previewPic {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+    margin-right: 0;
+  }
+
+  .blackBackPreview .previewPic > img {
+    position: relative;
+    left:0;
+    bottom: 0;
+  }
+
+  .blackBackPreview .previewBtns {
+    position: relative;
+    width: 100%;
+  }
+  .blackBackPreview .previewBtn {
+    display: block;
+    position: relative;
+  }
+
+  .featuresList .lists {
+    display: block;
+  }
+
+  .featuresList .lists > * {
+    display: block;
+  }
+
+  .featuresList .list1 {
+    margin-bottom: 0;
+  }
+  .featuresList .list2 {
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .featuresList h2.listTitle {
+    font-size: 2rem;
+  }
+
+  /*-----End Home-----*/
+
+  /*-----Start Footer-----*/
+  .appAdvertBack {
+    max-width: 1000px;
+  }
+
+  .footer .appAdvert {
+    display: block;
+    padding-bottom: 3rem!important;
+    padding-top: 3rem!important;
+
+    text-align: center;
+  }
+  .footer .appAdvert > * {
+    display: block;
+  }
+
+  .footer .advertImg {
+    display: block;
+  }
+
+  .footer .advertImg + .advertImg {
+    margin-left: 0;
+  }
+  
+  .footer .appLinks {
+    text-align: center;
+  }
+
+  .footer .information {
+    display: block
+  }
+
+  .footer .information > * {
+    display: block;
+    text-align: center;
+  }
+
+  .footer .information .siteId {
+    margin: auto;
+  }
+
+  .footer .information .socials {
+    margin-bottom: 2rem!important;
+  }
+
+  .footerLists {
+    display: block;
+  }
+  .footerLists > * {
+    display: block;
+  }
+
+  .footerLists > * + * {
+    padding-left: 0;
+  }
+
+  /*-----Start Footer-----*/
+}
+
+@media screen and (max-width: 790px) {
+  /*-----Start AppPreview-----*/
+  .appPreview {
+    display: block;
+    text-align: center;
+
+    padding-top: 4rem;
+  }
+  .appPreview > * {
+    display: block;
+  }
+  
+  .appPreview .previewText h2  {
+    text-align: center;
+    width: 90%;
+    font-size: 2.25rem;
+
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  .whiteBack .appPreview .previewBody {
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+
+    margin: auto;
+
+    text-align: center;
+    color: #4f5a65!important;;
+    font-size: 1.1875rem;
+  }
+
+  .appPreview .previewPic {
+    display: block;
+    width: 90%;
+    max-width: 100%;
+
+    margin: auto;
+    margin-top: 2rem;
+    margin-right: 0;
+  }
+
+  .appPreview .previewPic > img {
+    position: relative;
+    left:-2rem;
+    bottom: 0;
+  }
+
+  .appPreview .previewBtn {
+    margin: auto;
+  }
+  /*-----End AppPreview-----*/
+  
+  /*-----Start Steps-----*/
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+
+    text-align: center;
+}
+.stepsList > * {
+    display: block;
+  }
+
+  .steps {
+    text-align: center;
+  }
+
+  .steps .step {
+    text-align: center;
+  }
+
+  .steps ul {
+    display: block;
+    padding-right: 0;
+  }
+
+  .steps ul > li {
+    display: block;
+  }
+
+  .steps .step + .step {
+    margin-left: 0;
+  }
+
+  .steps .step > span {
+    display: inline-block;
+    margin: auto;
+  }
+
+  /*-----End Steps-----*/
+
+  /*-----Start Home----*/
+  .featuresList h2.listTitle  {
+    padding-top: 3rem!important;
+  }
+  
+  .previewDisplay {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .mobilePreviewDisplay {
+    visibility: visible;
+    position: static;
+  }
+  
+  .homeBody .activities {
+    display: block;
+    text-align: center;
+  }
+
+  .homeBody .activities > * {
+    display: block;
+    text-align: center;
+  }
+
+  .activity3 {
+    text-align: center;
+  }
+  /*----End Home-----*/
+
 }
