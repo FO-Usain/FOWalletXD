@@ -6,6 +6,11 @@ import Footer from "./reusables/Footer";
 
 //import the pages
 import Home from "./pages/Home";
+import Assets from "./pages/Assets";
+import Staking from "./pages/Staking";
+import Earn from "./pages/Earn";
+import NTFs from "./pages/NTFs";
+import DAppBrowser from "./pages/DAppBrowser";
 
 function App() {
   return (
@@ -15,6 +20,21 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/assets">
+            <Assets />
+          </Route>
+          <Route exact path="/staking">
+            <Staking />
+          </Route>
+          <Route exact path="/earn">
+            <Earn />
+          </Route>
+          <Route exact path="/ntfs">
+            <NTFs />
+          </Route>
+          <Route exact path="/dappbrowser">
+            <DAppBrowser />
           </Route>
         </Switch>
         <Footer />

@@ -8,6 +8,8 @@ body {
   overflow-x: hidden;
 }
 
+img { width: 100%;}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -32,6 +34,7 @@ div.nav {
   display: table;
   width: calc(100% - 4em);
   max-width: 1000px;
+  padding-bottom: 1rem;
 
   margin: auto;
   padding: 1.25rem 20px;
@@ -77,6 +80,7 @@ div.siteId > * {
 
 .menusSign {
   visibility: hidden;
+  position: absolute;
 }
 
 .menus {
@@ -123,7 +127,8 @@ div.siteId > * {
 /*-----Start AppPreview-----*/
 .appPreviewBackground {
   width: 100%;
-
+  max-width: 100%;
+  padding-bottom: 2rem;
   background-image: linear-gradient(to bottom right,#0B65C6 50%,#105BAA 100%);
 }
 
@@ -141,6 +146,17 @@ div.siteId > * {
   display: table-cell;
   
   vertical-align: middle;
+}
+
+
+.previewText .previewList  li {
+  margin-top: 20px;
+  box-sizing: border-box;
+  text-align: -webkit-match-parent;
+  color: #161c2d;
+  line-height: 1.5;
+  letter-spacing: 2;
+  width: 70%;
 }
 
 .appPreview > .previewPic {
@@ -170,6 +186,7 @@ div.siteId > * {
 
 .previewText {
   width: 52;
+  text-align: left;
 }
 .previewText h2 {
   position: relative;
@@ -251,6 +268,10 @@ div.siteId > * {
   position: relative;
   width: 100%;
 }
+
+.withLine {
+  border-bottom: 1px solid #f1f4f8!important;
+}
 /*-----End AppPreview-----*/
 
 /*-----Start DownloadBtn-----*/
@@ -291,6 +312,9 @@ a.downloadBtn:hover {
 
   max-width: 1000px;
   margin: auto;
+
+  padding-top: 5rem;
+  padding-bottom: 10rem;
 }
 .steps > h2 {
   color: #161c2d;
@@ -481,14 +505,721 @@ li.feature {
 .mobilePreviewDisplay {
   visibility: hidden;
   position: absolute;
+    
+  top: 0;
 }
 /*----End Home-----*/
+
+/*-----Start Assets-----*/
+
+.assets .appPreviewBackground {
+  margin-bottom: 4rem;
+}
+
+.assets > * {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.assets  .appPreviewBackground {
+  max-width: 100%;
+}
+ 
+.whiteDownloadNow {
+  display: inline-block;
+  font-weight: 600;
+
+  background-color: white;
+  border-color: transparent!important;
+
+  margin-top: 2rem!important;
+
+  text-decoration: none;
+  color: #0b65c6;
+  margin-left: auto!important;
+  margin-right: auto!important;
+
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  border: 1px solid transparent;
+  padding: .8125rem 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  border-radius: .375rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+.assets .supportedAssets {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.assets .saIntro {
+  display: table;
+  width: 100%;
+}
+
+.assets .saIntro > * {
+  display: table-cell;
+
+  vertical-align: top;
+}
+
+.saIntro h2 {
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  font-weight: 700!important;
+  font-size: 2.6875rem;
+  margin-bottom: .5rem;
+  margin-top: 0;
+  color: #161c2d;
+}
+
+.saIntro p {
+  margin: auto;
+  margin-bottom: 0!important;
+  margin-top: 0;
+  box-sizing: border-box;
+
+  color: #4f5a65!important;
+}
+
+.saLinks {
+  text-align: right;
+}
+
+.saLink {
+  display: inline-block;
+  font-weight: 600;
+
+
+  text-decoration: none;
+  margin-right: auto!important;
+
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  border: 1px solid transparent;
+  padding: .8125rem 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  border-radius: .375rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+.saLink +.saLink {
+  margin-left: 1rem;
+}
+
+#saLink1 {
+  color: white;
+  background-color:  #0b65c6;
+}
+
+#saLink2 {
+  color: #0b65c6;
+  background-color:  white;
+  border: .25px solid#d9e2ef;
+}
+
+#saLink1:hover  {
+  background-color: #0953a2;
+}
+
+#saLink2:hover {
+  color: white;
+  background-color:  #0b65c6;
+}
+
+.previewPic {
+  width: 50%;
+}
+
+.whiteBack .previewBody {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/*-----End Assets----*/
+/*-----Start CoinsList----*/
+.coinsList {
+  list-style: none;
+
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-top: 1rem;
+  padding-left: 0;
+}
+
+.coinsList > * {
+  flex: 1;
+  flex-basis: calc(100% / 3);
+}
+
+.coin {
+  padding: .5rem 0;
+}
+
+.coin a {
+  text-decoration: none;
+}
+
+.coin span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.coin .coinPicFrame {
+  width: 38px;
+  min-width: 38px;
+}
+
+.coinPicFrame > img {
+  width: 100%;
+}
+
+.coin .coinName {
+  color: #4f5a65!important;
+  margin-left: .5rem;
+}
+/*-----End CoinsList-----*/
+
+/*-----Start Staking-----*/
+.staking {
+  margin: auto;
+  max-width: 1000px;
+
+  text-align: center;
+}
+
+.staking .definitionTitle {
+  font-weight: 700!important;
+  margin-bottom: 1rem!important;
+  letter-spacing: -.01em;
+  line-height: 1.3;
+  font-size: 2.5125rem;
+  color: #161c2d;
+}
+
+.staking .definitionBdy {
+  color: #4f5a65!important;
+  margin-top: 0;
+  margin-bottom: 3rem!important;
+  line-height: 1.6rem;
+}
+
+.researchPrompt {
+  padding-top: 3rem!important;
+
+  text-align: left;
+}
+
+.researchPromptTitle {
+  font-weight: 700!important;
+  line-height: 1.4;
+  letter-spacing: -.01em;
+  font-size: 1.3125rem;
+  margin-bottom: .5rem;
+  margin-top: 0;
+
+  color: #161c2d; 
+}
+
+.researchPromptBody {
+  color: #4a545e!important;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.stakeables {
+  text-align: left;
+  padding-top: 3rem!important;
+  padding-bottom: 2rem!important;
+}
+/*-----End Staking-----*/
+
+/*-----Start StakingCalc-----*/
+
+.stakingCalc {
+  padding: 2rem;
+  box-shadow: 0 1.5rem 4rem rgba(22,28,45,.1)!important;
+  background-color: white;
+}
+
+.stakingCalc > * {
+  margin: auto;
+  position: relative;
+  z-index: 0;
+}
+
+.coinSelection {
+  position: relative;
+  z-index: 1;
+}
+
+.stakingCalc .calcTitle {
+  font-weight: 700!important;
+  margin-bottom: .25rem!important;
+  line-height: 1.35;
+  letter-spacing: -.01em;
+  font-size: 1.9375rem;
+  margin-top: 0;
+}
+
+.stakingCalc .shortNote {
+  color: #4f5a65!important;
+  padding-bottom: 1rem!important;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.stakingCalc .optionsContainer {
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  display: block;
+  width: 100%;
+  height: fit-content;
+}
+
+#optionsContainer {
+  visibility: hidden;
+}
+
+.stakingCalc .options {
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+
+  margin-top: .25rem;
+  padding-left: 0;
+
+  font-size: .9rem;
+  color: #2b354f;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(22,28,45,.15);
+  border-radius: .25rem;
+
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.option {
+  display: flex;
+  width: calc(100% - 1.5rem);
+
+  vertical-align: middle;
+  padding: .375rem .75rem;
+
+  line-height: 1;
+
+}
+
+.options .tappable {
+  cursor: pointer;
+}
+
+.options .tappable:hover {
+  background-color: #f9fafb;
+}
+
+.option .percentChange {
+  color: #49a397;
+  white-space: nowrap!important;
+  font-size: 80%;
+    font-weight: 400;
+}
+
+.options .meta {
+  padding: 10px 16px;
+  background-color: #f9fafb;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.options .coin {
+  text-align: left;
+}
+
+.options .currAPY {
+  text-align: right;
+}
+
+.option > * {
+  flex: 1;
+}
+
+.selected {
+  display: flex;
+  width: calc(100% - 1.5rem);
+
+
+  font-weight: 400;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #f1f4f8;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.selected:hover {
+  border-color: #3375bb;    
+}
+
+.selected > * {
+  flex: 1;
+}
+
+
+.selected span {
+  vertical-align: middle;
+}
+
+
+.coinCount {
+
+  position: relative;
+  z-index: 0;
+  margin-top: 1rem;
+
+  font-weight: 400;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #f1f4f8;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 2.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.coinCount:hover {
+  border-color: #3375bb;    
+}
+
+.coinCount > * {
+  position: relative;
+  z-index: 0;
+}
+
+.coinCount > input {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+
+}
+
+.coinCount .countChanger {
+  position: absolute;
+  top: .25rem;
+  right: .25rem;
+  z-index: 1;
+}
+
+.stakingCalc .logo-name {
+  text-align: left;
+}
+
+.logo-name .logoFrame {
+  display: inline-block;
+    width: 30px;
+    min-width: 20px;
+}
+
+.logo-name .name {
+  display: inline-block;
+  margin-left: .5rem;
+
+  color: #2b354f!important;
+}
+
+.selected .percentChange {
+  margin-left: auto;
+  text-align: right;
+  color: #49a397;
+
+  font-size: 80%;
+  font-weight: 400;
+}
+
+.stakingCalc .earnings {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 0;
+}
+
+.earnings > li > div {
+  display: flex;
+  width: 100%;
+}
+
+.earnings > li > div > * {
+  flex: 1;
+}
+
+.earnings .period {
+  letter-spacing: .08em;
+  color: #4a545e!important;
+  line-height: 1.55;
+  margin-top: .5rem!important;
+  margin-bottom: .5rem;
+  font-weight: 400;
+  font-size: .75rem;
+
+}
+
+.earnings .earningsValue {
+  margin-left: auto;
+  text-align: right;
+
+  color: #037265;
+}
+
+.earnNow {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #0b65c6;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+
+  border: none;
+
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  border-radius: .375rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+.earnNow:hover {
+  background-color:  #0953a2;
+}
+/*-----End StakingCalc-----*/
+
+/*-----Start Earn-----*/
+.earn {
+  margin: auto;
+  width: 100%;
+
+  vertical-align: middle;
+}
+.earn > * {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.earn  .appPreviewBackground {
+  max-width: 100%;
+}
+
+.earnHead {
+  display: flex;
+  align-items: center;
+  max-width: 1000px ;
+  margin: auto;
+}
+
+.earnHead > * {
+  flex: 1;
+}
+
+.earnHead .left {
+  vertical-align: middle;
+}
+
+.left h1 {
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  font-weight: 700!important;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+
+  color: white;
+}
+
+.left p {
+  color: rgba(255,255,255,.9)!important;
+  margin-bottom: 1rem!important;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.earnHead .stakingCalc {
+  border-radius: .375rem;
+  margin-left: 8.3333333333%;
+  text-align: center;
+}
+
+.earnables h2 {
+  margin-bottom: 3rem!important;
+  text-align: right;
+  /* padding-right: 10rem; */
+
+  font-weight: 700!important;
+  text-align: center!important;
+  line-height: 1.35;
+  letter-spacing: -.01em;
+  font-size: 1.9375rem;
+}
+
+a.btnBlueborder {
+  margin-top: 0;
+
+  display: inline-block;
+  font-weight: 600;
+
+  background-color: white;
+
+  margin-top: 0!important;
+
+  text-decoration: none;
+  color: #0b65c6;
+  margin-left: auto!important;
+  margin-right: auto!important;
+
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  border: 1px solid #d9e2ef;
+  padding: .8125rem 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  border-radius: .375rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+a.btnBlueborder:hover {
+  color: white;
+  background-color: #0b65c6;
+}
+/*-----End Earn-----*/
+
+/*----Start NFTs-----*/
+.nfts .blackBackPreview {
+  margin: auto;
+}
+.nfts .blackBackPreview .previewPic {
+  width: 60%;
+  padding-left: 0;
+  max-width: 50%;
+}
+
+.nfts .blackBackPreview .previewPic img {
+  position: relative;
+}
+
+.nfts .blackBackPreview .previewText {
+  width: 40%;
+}
+.nfts .blackBackPreview .previewText > * {
+  position: static;
+}
+
+.nfts .blackBackPreview .previewText > h1 {
+  font-family: ibmplexsans,sans-serif;
+}
+
+
+.nfts .blackBackPreview .previewText p {
+  line-height: 1.5;
+}
+
+.supportedNFTs {
+  max-width: 1000px;
+  margin: auto;
+}
+.supportedNFTs h2 {
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  font-weight: 700!important;
+  margin-bottom: 2rem!important;
+  font-size: 2.6875rem; 
+  color: #161c2d;
+}
+
+/*-----End NFTs-----*/
+
+/*-----Start DAppBrowser-----*/
+
+.marketPlace {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+.marketPlace h2 {
+  font-weight: 700!important;
+  line-height: 1.35;
+  letter-spacing: -.01em;
+  margin-bottom: 1rem;
+  font-size: 1.9375rem;
+  color: #161c2d;
+}
+
+.marketPlace p {
+    color: #4a545e!important;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.marketPlace .marketPlacePics {
+  display: flex;
+}
+
+.marketPlace .marketPlacePics > * {
+  margin-top: 2rem!important;
+  flex: 0;
+  flex-basis: 33.3333333%;
+  max-width: 33.3333333%;
+}
+
+.marketPlace .marketPlacePics > * + * {
+  margin-left: 2rem;
+}
+
+.marketPlace .marketPlacePics > * > img {
+  width: 100%;
+}
+.marketPlacePics
+/*-----End DAppBrowser-----*/
 
 /*-----Start Footer-----*/
 
 .footer {
   margin: auto;
-  margin-top: 5rem!important;
   height: fit-content;
 }
 
@@ -642,6 +1373,11 @@ li.feature {
   }
 
   .menusSign {
+    position: relative;
+    display: inline-block;
+    max-width: 9px;
+    min-width: 9px;
+
     visibility: visible;
     text-align: right;
 
@@ -649,6 +1385,10 @@ li.feature {
     font-size: 2rem;
   }
 
+  .menusSign > img {
+    width: 100%;
+  }
+ 
   .menus {
     visibility: hidden;
     position: absolute;
@@ -674,6 +1414,18 @@ li.feature {
     color: #4f5a65;
 
   }
+
+  .menus a:hover {
+    display: block;
+
+
+  }
+
+  .menus > a:hover {
+    color: #4f5a65!important;
+    
+}
+
   .menus a + a {
     border-top: 1px solid #f1f4f8;
   }
@@ -774,6 +1526,108 @@ li.feature {
 
   /*-----End Home-----*/
 
+  /*-----Start Assets-----*/
+  .whiteDownloadNow {
+    width: fit-content;
+  }
+  /*-----End Assets-----*/
+  
+  /*-----Start Staking-----*/
+  .staking {
+    padding: 0 1.5rem;
+  }
+  /*-----End Staking-----*/
+
+  /*-----Start StakingCalculator-----*/
+  .stakingCalc {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*-----End StakingCalculator-----*/
+
+  /*-----Start Earn-----*/
+  
+  .earn > * {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .earnHead {
+    width: calc(100% - 4em);
+    max-width: 1000px;
+    padding-bottom: 1rem;
+    margin: auto;
+
+    flex-direction: column;
+    text-align: center;  
+  }
+  
+  .earnHead .stakingCalc {
+    margin-left: 0;
+    margin: auto;
+  }
+
+
+  .left h1 {
+    font-size: 2.25rem;
+  }
+
+  .left p {
+    font-size: 1.1875rem;
+  }
+  /*-----End Earn-----*/
+  
+  /*-----Start NFTs-----*/
+
+  .nfts > * + * {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .nfts .blackBackPreview > * {
+    margin: auto;
+    width: 100%;
+  }
+
+  .nfts .blackBackPreview .previewText {
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  .nfts .blackBackPreview .previewText > * {
+    margin-left: 0;
+  }
+
+  .nfts .blackBackPreview .previewText a {
+    width: fit-content;
+  }
+  .nfts .blackBackPreview .previewText .whiteDownloadNow {
+    margin-left: 0!important;
+  }
+
+  .nfts .blackBackPreview .previewPic {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /*-----End NFTs-----*/
+
+  /*-----Start DAppBrowser-----*/
+  .dAppBrowser .previewText {
+    display: block;
+  }
+
+  .marketPlace {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .marketPlace .marketPlacePics {
+    flex-wrap: wrap;
+  }
+
+  /*-----End DAppBrowser----*/
+
   /*-----Start Footer-----*/
   .appAdvertBack {
     max-width: 1000px;
@@ -844,6 +1698,10 @@ li.feature {
   .appPreview > * {
     display: block;
   }
+  .previewText {
+    width: 52;
+    text-align: center;
+  }
   
   .appPreview .previewText h2  {
     text-align: center;
@@ -852,6 +1710,12 @@ li.feature {
 
     margin: auto;
     margin-bottom: 1rem;
+  }
+
+  .previewText .previewList  li {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .whiteBack .appPreview .previewBody {
@@ -899,8 +1763,9 @@ li.feature {
     padding-inline-start: 0px;
 
     text-align: center;
-}
-.stepsList > * {
+
+  }
+  .stepsList > * {
     display: block;
   }
 
@@ -961,5 +1826,73 @@ li.feature {
     text-align: center;
   }
   /*----End Home-----*/
+
+  /*-----Start Assets-----*/
+  .assetsBody {
+    padding: 1.25rem 20px;
+    padding-top: 0;
+    width: calc(100% - 4em);
+
+    margin: auto;
+  }
+
+  .assets .saIntro {
+    display: block;
+    text-align: center;
+  }
+
+  .assets .saIntro > * {
+    display: block;
+  }
+
+  .saLinks {
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+  .saLinks > * {
+    display: block;
+  }
+
+  .saLink + .saLink {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  /*-----End Assets-----*/
+
+  /*-----Start CoinsList-----*/
+  .coinsList {
+    flex-direction: column;
+  }
+
+  .coinsList > .coin {
+      text-align: left;
+  }
+
+  /*-----End CoindsList-----*/
+
+  /*-----Start DAppBrowser-----*/
+  .marketPlace {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .marketPlace .marketPlacePics {
+    flex-direction: column;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .marketPlace .marketPlacePics > * {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .marketPlace .marketPlacePics > * + * {
+    margin-left: 0;
+  }
+  /*-----End DAppBrowser-----*/
 
 }

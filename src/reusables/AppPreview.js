@@ -9,7 +9,28 @@ const AppPreview = ({appPreview, picLeft}) => {
         <div className={`appPreview ${appPreview.className}`}>
             <span className="previewText">
                 <h2 className="previewTitle">{appPreview.title}</h2>
-                <p className="previewBody">{appPreview.body}</p>
+                {
+                    appPreview.body
+
+                    &&
+
+                    <p className="previewBody">{appPreview.body}</p>
+                }
+                {
+                    appPreview.list 
+
+                    &&
+
+                    <ul className="previewList">
+                        {
+                            appPreview.list.map(item => {
+                                return (
+                                    <li>{item}</li>
+                                );
+                            })
+                        } 
+                    </ul>
+                }
                 <div className="previewBtns">
                     {
                         anchors.map(anchor => {
@@ -41,8 +62,29 @@ const AppPreview = ({appPreview, picLeft}) => {
         <div className={`appPreview ${appPreview.className}`}>
             <span className="previewPic previewPicLeft"><img src={appPreview.picSrc} /></span>
             <span className="previewText">
-                <h2 className="previewTitle">{appPreview.title}</h2>
-                <p className="previewBody">{appPreview.body}</p>
+            <h2 className="previewTitle">{appPreview.title}</h2>
+                {
+                    appPreview.body
+
+                    &&
+
+                    <p className="previewBody">{appPreview.body}</p>
+                }
+                {
+                    appPreview.list 
+
+                    &&
+
+                    <ul className="previewList">
+                        {
+                            appPreview.list.map(item => {
+                                return (
+                                    <li>{item}</li>
+                                );
+                            })
+                        } 
+                    </ul>
+                }
                 {
                     anchors.map(anchor => {
                         return (

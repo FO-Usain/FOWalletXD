@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const Nav = () => {
 
-    let siteTitle = "FO Wallet";
+    let siteTitle = "Trust Wallet";
     let logoSrc = "/images/logo.png";
 
     const goHome = () => {
@@ -15,7 +15,7 @@ const Nav = () => {
         {
             id: 1,
             name: "Assets",
-            href: "",
+            href: "/assets",
             title: "",
             meta: null,
 
@@ -23,7 +23,7 @@ const Nav = () => {
         {
             id: 2,
             name: "Staking",
-            href: "",
+            href: "/staking",
             title: "",
             meta: null,
 
@@ -31,7 +31,7 @@ const Nav = () => {
         {
             id: 3,
             name: "Earn",
-            href: "",
+            href: "/earn",
             title: "",
             meta: {
                 percent: 11,
@@ -43,7 +43,7 @@ const Nav = () => {
         {
             id: 4,
             name: "NFTs",
-            href: "",
+            href: "/ntfs",
             title: "",
             meta: null,
 
@@ -51,7 +51,7 @@ const Nav = () => {
         {
             id: 5,
             name: "DApp Browser",
-            href: "",
+            href: "/dappbrowser",
             title: "",
             meta: null,
         },
@@ -77,6 +77,15 @@ const Nav = () => {
         }
         
     }
+
+    /**
+     * closes the menus tile
+     * @param {*} className 
+     */
+    const closeMenus = (className) => {
+        document.querySelector(`.${className}`).style.visibility = "hidden";
+        document.querySelector(`.${className}`).style.position = "absolute";
+    }
     
     return (
         <div className="navBackground">
@@ -85,12 +94,12 @@ const Nav = () => {
                     <span className="siteLogoFrame"><img src={logoSrc} /></span>
                     <h1 className="siteTitle">{siteTitle}</h1>
                 </div>
-                <span className="menusSign" onClick={() => changeVisibily("mobileMenus")}>&#9776;</span>
+                <span className="menusSign" onClick={() => changeVisibily("mobileMenus")}><img src="/images/menuSign.png" /></span>
                 <div className="menus">
                     {
                         menus.map((menu) => {
                             return (
-                                <Link href={menu.href} key={menu.id}>
+                                <Link to={menu.href} key={menu.id}>
                                     {menu.name}
                                     {
                                         menu.meta
@@ -109,7 +118,7 @@ const Nav = () => {
                     {
                         menus.map((menu) => {
                             return (
-                                <Link href={menu.href} key={menu.id}>
+                                <Link to={menu.href} key={menu.id} onClick={() => closeMenus("mobileMenus")}>
                                     {menu.name}
                                     {
                                         menu.meta

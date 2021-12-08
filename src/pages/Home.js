@@ -1,5 +1,6 @@
 import AppPreview from "../reusables/AppPreview";
 import DownloadBtn from "../reusables/DownloadBtn";
+import FeaturesList from "../reusables/FeaturesList";
 import Steps from "../reusables/Steps";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     let appPreview = {
         className: "blackBackPreview",
         title: "The most trusted & secure crypto wallet",
+        list: null,
         body: "Buy, store, collect NFTs, exchange & earn crypto. Join 10 million+ people using Trust Wallet.",
         anchors: [
             {
@@ -52,16 +54,17 @@ const Home = () => {
         },
     ];
 
-    let features1 = ["Buy Bitcoin in under five minutes", "Easily earn interest on the crypto in your wallet", "See your collectibles. Art & NFTs in one place"];
-    let features2 = ["Exchange your crypto without leaving the app", "Track charts and prices within the app", "Keep your crypto safe from hackers & scammers"];
     let listTitle = "You Deserve Easy Access to Cryptocurrencies";
     let introSentence = "Trust Wallet is for you if you want to";
+    let features1 = ["Buy Bitcoin in under five minutes", "Easily earn interest on the crypto in your wallet", "See your collectibles. Art & NFTs in one place"];
+    let features2 = ["Exchange your crypto without leaving the app", "Track charts and prices within the app", "Keep your crypto safe from hackers & scammers"];
 
     let appPreviews = [
         {
             id: 1,
             className: "whiteBack",
             title: "Buy Crypto With a Card",
+            list: null,
             body: "Get your first $50 of Bitcoin, Ethereum, Binance Coin and many other cryptocurrencies.",
             anchors: [
                 {
@@ -78,6 +81,7 @@ const Home = () => {
             id: 2,
             className: "whiteBack",
             title: "Exchange Instantly",
+            list: null,
             body: "No forms, no selfies. Trade crypto anytime with ease.",
             anchors: [
                 {
@@ -93,6 +97,7 @@ const Home = () => {
             id: 3,
             className: "whiteBack",
             title: "Private & Secure",
+            list: null,
             body: "Only you can access your wallet. We don’t collect any personal data.",
             anchors: [
                 {
@@ -108,6 +113,7 @@ const Home = () => {
             id: 4,
             className: "whiteBack",
             title: "Browser for DApps",
+            list: null,
             body: "Use your favourite decentralized apps & find new ones, without leaving your wallet.",
             anchors: [
                 {
@@ -140,41 +146,7 @@ const Home = () => {
                         }, 0)
                     }
                 </div>
-                <div className="featuresList">
-                    <h2 className="listTitle">{listTitle}</h2>
-                    <p className="listSentence">
-                        <p className="intro">{introSentence}</p>
-                        <div className="lists">
-                            <ul className="list1">
-                                {
-                                    features1.map((feature, count) => {
-                                        ++count;
-                                        return (
-                                            <li className="feature">
-                                                <span className="tickFeature"><img src="/images/pages/home/check.svg" /></span>
-                                                <span className="featureName">{feature}</span>
-                                            </li>
-                                        )
-                                    })
-                                }
-                            </ul>
-                            <ul className="list2">
-                                {
-                                    features2.map((feature, count) => {
-                                        ++count;
-                                        return (
-                                            <li className="feature">
-                                                <span className="tickFeature"><img src="/images//pages/home/check.svg" /></span>
-                                                <span className="featureName">{feature}</span>
-                                            </li>
-                                        )
-                                    })
-                                }
-                            </ul>
-                        </div>
-                        <DownloadBtn />
-                    </p>
-                </div>
+                <FeaturesList listTitle={listTitle} introSentence={introSentence} features1={features1} features2={features2} btnOn={true} />
                 <div className="previewDisplay">
                     {
                         appPreviews.map(preview => {
