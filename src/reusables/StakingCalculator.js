@@ -98,7 +98,7 @@ const StakingCalc = () => {
                         {
                             coins.map(coin => {
                                 return (
-                                    <li className="option tappable" key={coin.id} onClick={() => {chooseCoin(coin.id)}}>
+                                    <li className="option tappable" key={coin.id} onClick={() => {chooseCoin(coin.id); changeVisibility("optionsContainer")}}>
                                         <span className="coin logo-name">
                                             <span className="logoFrame"><img src={`https://cryptologos.cc/logos/${(new String(coin.name)).replace(/\s+/g, "-").toLowerCase()}-${(new String(coin.symbol)).toLowerCase()}-logo.png`} /></span>
                                             <span className="name">{coin.name}</span>

@@ -13,11 +13,12 @@ const Staking = () => {
             id: 1,
             className: "whiteBack withLine",
             title: "What are some of the benefits?",
-            list: null,
-            body: "Securely carry your favorite cryptocurrencies on your Android and Apple devices with Trust Wallet. With an average user review of 4.7 / 5.0, you can feel confident your Digital Assets are private and safe.",
-            anchors: [
-                
+            list: [
+                "One of the major benefits for staking coins is that it removes the need for continuously purchasing expensive hardware and consuming energy.",
+                "The system offers guaranteed returns and a predictable source of income unlike the proof-of-work system where coins are rewarded through a mathmatetical process with a low probability of paying out. Another benefit is that the value of your staked coins doesn't depreciate unlike with ASICs and other mining hardware. Staked coins are only affected by market price fluctuations.",
             ],
+            body: null,
+            anchors: [],
             picSrc: "/images/pages/staking/staking_coin.png",
         },
         {
@@ -68,7 +69,7 @@ const Staking = () => {
             </div>
             <div className="stakeables">
                 <h2 className="stakeableTitle">Trust Wallet lets you stake the following coins</h2>
-                <CoinsList serverURL="http://localhost:4000/stakeables" />
+                <CoinsList serverURL="http://localhost:4000/stakeables" lastSentence="More coming soon..." />
             </div>
         </div>
      );

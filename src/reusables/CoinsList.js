@@ -1,6 +1,6 @@
 import { useFetchJson } from "../hooks";
 
-const CoinsList = ({serverURL = "http://676c-197-210-29-58.ngrok.io/cryptos"}) => {
+const CoinsList = ({serverURL = "http://676c-197-210-29-58.ngrok.io/cryptos", lastSentence = null}) => {
 
 
     //get the crypto representations from server
@@ -43,6 +43,13 @@ const CoinsList = ({serverURL = "http://676c-197-210-29-58.ngrok.io/cryptos"}) =
                 <div className="error">
                     {error}
                 </div>
+            }
+            {
+                lastSentence
+
+                &&
+
+                <li className="coin moreCoins">{lastSentence}</li>
             }
         </ul>
      );

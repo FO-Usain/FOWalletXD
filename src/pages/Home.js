@@ -66,15 +66,7 @@ const Home = () => {
             title: "Buy Crypto With a Card",
             list: null,
             body: "Get your first $50 of Bitcoin, Ethereum, Binance Coin and many other cryptocurrencies.",
-            anchors: [
-                {
-                    id: 1,
-                    name: "Download Now",
-                    href: "",
-                    className: "",
-                    className: "downloadBtn",
-                },
-            ],
+            anchors: [],
             picSrc: "/images/pages/home/home_cards.png",
         },
         {
@@ -83,14 +75,7 @@ const Home = () => {
             title: "Exchange Instantly",
             list: null,
             body: "No forms, no selfies. Trade crypto anytime with ease.",
-            anchors: [
-                {
-                    id: 1,
-                    name: "Download Now",
-                    href: "",
-                    className: "downloadBtn",
-                },
-            ],
+            anchors: [],
             picSrc: "/images/pages/home/home_dex.png",
         },
         {
@@ -99,14 +84,7 @@ const Home = () => {
             title: "Private & Secure",
             list: null,
             body: "Only you can access your wallet. We don’t collect any personal data.",
-            anchors: [
-                {
-                    id: 1,
-                    name: "Download Now",
-                    href: "",
-                    className: "downloadBtn",
-                },
-            ],
+            anchors: [],
             picSrc: "/images/pages/home/home_security.png",
         },
         {
@@ -115,14 +93,7 @@ const Home = () => {
             title: "Browser for DApps",
             list: null,
             body: "Use your favourite decentralized apps & find new ones, without leaving your wallet.",
-            anchors: [
-                {
-                    id: 1,
-                    name: "Download Now",
-                    href: "",
-                    className: "downloadBtn",
-                },
-            ],
+            anchors: [],
             picSrc: "/images/pages/home/dapp_preview.png",
         }, 
     ];

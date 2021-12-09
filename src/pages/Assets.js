@@ -50,15 +50,7 @@ const Assets = () => {
             list: null,
             list: null,
             body: "Securely carry your favorite cryptocurrencies on your Android and Apple devices with Trust Wallet. With an average user review of 4.7 / 5.0, you can feel confident your Digital Assets are private and safe.",
-            anchors: [
-                {
-                    id: 1,
-                    name: "Download Now",
-                    href: "",
-                    className: "",
-                    className: "downloadBtn",
-                },
-            ],
+            anchors: [],
             picSrc: "/images/pages/assets/assets_rating.png",
         },
         {
@@ -67,14 +59,7 @@ const Assets = () => {
             title: "Thousands of Supported Coins",
             list: null,
             body: "Our multicoin wallet app supports the main blockchains within the Ethereum ecosystem, and works with any ERC20, BEP2 and ERC721 tokens whilst also providing coverage as a Bitcoin Wallet. We've also recently added support for Binance Smart Chain. The Trust Wallet development team continues to add support for more cryptocurrencies every month, so be sure to check for updates. Or better yet, reach out to our team to share support for your favourite coins and get them added into Trust Wallet!",
-            anchors: [
-                {
-                    id: 1,
-                    name: "Download Now",
-                    href: "",
-                    className: "downloadBtn",
-                },
-            ],
+            anchors: [],
             picSrc: "/images/pages/assets/assets_coins.png",
         },
     ];
@@ -103,7 +88,7 @@ const Assets = () => {
                             }
                         </span>
                     </div>
-                    <CoinsList serverURL="http://localhost:4000/cryptos" />
+                    <CoinsList serverURL="http://localhost:4000/cryptos" lastSentence="+1M more assets supported..." />
 
                 </div>
                 <Steps />
