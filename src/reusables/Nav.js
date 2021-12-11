@@ -14,6 +14,14 @@ const Nav = () => {
     const [menus, setMenus] = useState([
         {
             id: 1,
+            name: "Login",
+            href: "/login",
+            title: "",
+            meta: null,
+
+        },
+        {
+            id: 2,
             name: "Assets",
             href: "/assets",
             title: "",
@@ -21,7 +29,7 @@ const Nav = () => {
 
         },
         {
-            id: 2,
+            id: 3,
             name: "Staking",
             href: "/staking",
             title: "",
@@ -29,7 +37,7 @@ const Nav = () => {
 
         },
         {
-            id: 3,
+            id: 4,
             name: "Earn",
             href: "/earn",
             title: "",
@@ -41,7 +49,7 @@ const Nav = () => {
 
         },
         {
-            id: 4,
+            id: 5,
             name: "NFTs",
             href: "/ntfs",
             title: "",
@@ -49,14 +57,14 @@ const Nav = () => {
 
         },
         {
-            id: 5,
+            id: 6,
             name: "DApp Browser",
             href: "/dappbrowser",
             title: "",
             meta: null,
         },
         {
-            id: 6,
+            id: 7,
             name: "Language",
             href: "",
             title: "",
@@ -78,6 +86,10 @@ const Nav = () => {
         
     }
 
+    // const chBack = (maxHeight) => {
+    //     let back = el.document.querySelector("navBack");
+    // }
+
     /**
      * closes the menus tile
      * @param {*} className 
@@ -88,7 +100,7 @@ const Nav = () => {
     }
     
     return (
-        <div className="navBackground">
+        <div id="navBack" className="navBackground">
             <div className="nav">
                 <div className="siteId" onClick={goHome }>
                     <span className="siteLogoFrame"><img src={logoSrc} /></span>

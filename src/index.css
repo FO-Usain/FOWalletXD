@@ -23,12 +23,24 @@ code {
   overflow-y: auto;
 }
 
+.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 /*-----Start Nav-----*/
 .navBackground {
   position: sticky;
   z-index: 1;
   width: 100%;
   background-color:  #0b65c6!important;
+  vertical-align: middle;
+  min-height: 11%;
 }
 div.nav {
   display: table;
@@ -123,7 +135,7 @@ div.siteId > * {
   font-size: 75%;
 }
 
-.menuMeta:hover {
+.menus > a:hover .menuMeta {
   opacity: 50%;
 }
 
@@ -1229,11 +1241,253 @@ a.btnBlueborder:hover {
 .marketPlace .marketPlacePics > * > img {
   width: 100%;
 }
-.marketPlacePics
 /*-----End DAppBrowser-----*/
 
-/*-----Start Footer-----*/
+/*-----Start SlidingContents-----*/
 
+.slidingContents {
+  text-align: center;
+  padding-top: 5rem;
+  margin: auto;
+}
+.slidingContent {
+  visibility: hidden;
+  position: fixed;
+
+  display: inline-block;
+}
+
+#slidingContent1 {
+  visibility: visible;
+  position: relative;
+}
+
+.contentPicFrame {
+  text-align: center;
+  margin: auto;
+  width: 250px;
+  min-width: 50px;  
+}
+.contentPicFrame > img {
+  width: 100%;
+}
+
+.slidingContent .contentTitle {
+  font-weight: 700!important;
+  color: #161c2d;
+  line-height: 1.4;
+  letter-spacing: -.01em;
+  font-size: 2.6875rem;
+  margin-bottom: .5rem;
+  font-weight: 40;
+}
+
+.slidingContent .contentMsg {
+  margin-top: 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  color: #4f5a65!important;
+  margin-bottom: 1rem;
+}
+
+/*-----End SlidingContents-----*/
+
+/*-----Start Login-----*/
+
+.login {
+  max-width: 1000px;
+  height: 89%;
+  margin: auto;
+
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.login .createWallet {
+  display: block;
+  font-weight: 600;
+  width: fit-content;
+
+  background-color: #0b65c6;
+  border-color: transparent!important;
+
+  margin-top: 2rem!important;
+
+  text-decoration: none;
+  color: white;
+  margin-left: auto!important;
+  margin-right: auto!important;
+
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  border: 1px solid transparent;
+  padding: .8125rem 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  border-radius: .375rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.login .createWallet:hover {
+  background-color: #0953a2;
+
+}
+
+.login .haveWallet {
+  display: block;
+  margin-top: .25rem!important;
+  color: #0b65c6;
+
+  font-weight: 600;
+
+  margin-left: auto!important;
+  margin-right: auto!important;
+
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  border: 1px solid transparent;
+  padding: .8125rem 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+
+  text-decoration: none;
+}
+
+/*-----End Login-----*/
+
+/*-----Start Legal-----*/
+.legal {
+  max-width: 1000px;
+  height: 89%;
+  margin: auto;
+}
+
+.legal h2 {
+  text-align: center;
+
+  color: #161c2d;
+  font-weight: 700!important;
+  font-size: 1.3125rem;
+  line-height: 1.4;
+  letter-spacing: -.01em;
+  margin-bottom: .5rem;
+  font-weight: 40;
+}
+.legal .legalMsg {
+  margin-top: 10rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  color: #4f5a65!important;
+  margin-bottom: 1rem;
+}
+
+.legalClasses {
+  background-color: rgb(250,250,250);
+  padding: 0 1rem;
+
+  border-radius: .475rem;
+}
+
+.legalClass {
+  display: flex;
+  padding: .25rem;
+  padding-left: 0;
+  width: 100%;
+
+  text-decoration: none;
+}
+
+.legalClass + .legalClass {
+  border-top: 1px solid rgb(234, 234, 234);
+}
+
+.legalClass > * {
+  flex: 0;
+  flex-basis: auto;
+}
+
+.legalClass .className {
+  flex: 1;
+  margin-top: 10rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  color: #4f5a65!important;
+  margin-bottom: 1rem;
+}
+
+.legal .rArrowFrame {
+  display: inline-block;
+  width: 10px;
+}
+
+.legal img {
+  width: 100%;
+}
+
+.legal .blankFrame {
+  max-width: 250px;
+}
+
+.checkPrompt {
+  display: table;
+}
+
+.checkPrompt > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.checkPrompt .checkFrame > img {
+  cursor: pointer;
+}
+
+.checkPrompt .prompt {
+  padding-left: 1rem;
+  color: rgb(74, 120, 154)
+}
+
+.legal .checkFrame {
+  display: inline-block;
+  width: 20px;
+}
+
+.legal .contLogin {
+  display: block;
+  font-weight: 600;
+  width: fit-content;
+
+  background-color: rgb(170, 170, 170);
+  border-color: transparent!important;
+
+  margin-top: 2rem!important;
+
+  text-decoration: none;
+  color: white;
+  margin-left: auto!important;
+  margin-right: auto!important;
+
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  border: 1px solid transparent;
+  padding: .8125rem 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  border-radius: .375rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/*-----End Legal-----*/
+
+/*-----Start Footer-----*/
 .footer {
   margin: auto;
   height: fit-content;
@@ -1701,6 +1955,9 @@ a.btnBlueborder:hover {
 }
 
 @media screen and (max-width: 790px) {
+  :root {
+    font-size: 12px;
+  }
   /*-----Start AppPreview-----*/
   .appPreview {
     display: block;
@@ -1913,6 +2170,35 @@ a.btnBlueborder:hover {
   }
   /*-----End DAppBrowser-----*/
 
+  /*-----Start SlidingContents-----*/
+  .slidingContents {
+    padding-top: 3rem;
+  }
+
+  .slidingContent .contentTitle {
+  font-size: 1.3125rem;
+  }
+  /*-----End SlidingContents-----*/
+
+
+  /*-----Start Login-----*/
+  .login {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  .login .createWallet {
+    width: 90%;
+  }
+
+  /*-----End Login-----*/
+
+  /*----Start Legal----*/
+  .legal {
+    padding: 0 2rem;
+  }
+  
+  /*----End Legal----*/
 }
 
 @media screen and (max-width: 440px) {

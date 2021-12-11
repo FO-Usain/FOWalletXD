@@ -11,6 +11,8 @@ import Staking from "./pages/Staking";
 import Earn from "./pages/Earn";
 import NTFs from "./pages/NTFs";
 import DAppBrowser from "./pages/DAppBrowser";
+import Login from "./pages/Login";
+import Legal from "./pages/Legal";
 
 function App() {
   return (
@@ -35,6 +37,12 @@ function App() {
           </Route>
           <Route exact path="/dappbrowser">
             <DAppBrowser />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/login/legal">
+            <Legal />
           </Route>
         </Switch>
         <Footer />
