@@ -15,19 +15,19 @@ const SlidingContents = ({contents}) => {
     }
 
     return (
-        <div id="slidingContents" className="slidingContents">
-            {
-                contents.map(content => {
-                    return (
-                        <div  id={`slidingContent${content.id}`} className="slidingContent" key={content.id} >
-                            <div className="contentPicFrame"><img src={content.imgSrc} onClick={() => adjust()} /></div>
-                            <h2 className="contentTitle">{content.title}</h2>
-                            <p className="contentMsg">{content.msg}</p>
-                        </div>
-                    );
-                })
-            }
-        </div>
+            <div id="slidingContents" className="slidingContents">
+                {
+                    contents.map(content => {
+                        return (
+                            <div  id={`slidingContent${content.id}`} className="slidingContent" key={content.id} >
+                                <div className="contentPicFrame"><img src={content.imgSrc} onClick={() => adjust()} /></div>
+                                <h2 className="contentTitle">{content.title}</h2>
+                                <p className="contentMsg">{content.msg}</p>
+                            </div>
+                        );
+                    })
+                }
+            </div>
     );
 }
  

@@ -1,6 +1,6 @@
 import { useFetchJson } from "../hooks";
 
-const CoinsList = ({serverURL = "http://676c-197-210-29-58.ngrok.io/cryptos", lastSentence = null}) => {
+const CoinsList = ({serverURL = "http://localhost:3000/cryptos", lastSentence = null}) => {
 
 
     //get the crypto representations from server

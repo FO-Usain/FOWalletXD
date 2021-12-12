@@ -13,6 +13,8 @@ import NTFs from "./pages/NTFs";
 import DAppBrowser from "./pages/DAppBrowser";
 import Login from "./pages/Login";
 import Legal from "./pages/Legal";
+import WalletType from "./pages/WalletType";
+import PassPhrase from "./pages/PassPhrase";
 
 function App() {
   return (
@@ -43,6 +45,12 @@ function App() {
           </Route>
           <Route exact path="/login/legal">
             <Legal />
+          </Route>
+          <Route exact path="/login/wallets">
+            <WalletType />
+          </Route>
+          <Route exact path="/login/passphrase">
+            <PassPhrase />
           </Route>
         </Switch>
         <Footer />

@@ -1295,6 +1295,8 @@ a.btnBlueborder:hover {
 /*-----Start Login-----*/
 
 .login {
+  position: relative;
+
   max-width: 1000px;
   height: 89%;
   margin: auto;
@@ -1332,6 +1334,15 @@ a.btnBlueborder:hover {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.links {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+
+  text-align: center;
+}
+
 .login .createWallet:hover {
   background-color: #0953a2;
 
@@ -1364,6 +1375,7 @@ a.btnBlueborder:hover {
 
 /*-----Start Legal-----*/
 .legal {
+  position: relative;
   max-width: 1000px;
   height: 89%;
   margin: auto;
@@ -1422,7 +1434,7 @@ a.btnBlueborder:hover {
   margin-bottom: 1rem;
 }
 
-.legal .rArrowFrame {
+  .rArrowFrame {
   display: inline-block;
   width: 10px;
 }
@@ -1467,6 +1479,7 @@ a.btnBlueborder:hover {
   border-color: transparent!important;
 
   margin-top: 2rem!important;
+  margin-bottom: 2rem!important;
 
   text-decoration: none;
   color: white;
@@ -1485,7 +1498,225 @@ a.btnBlueborder:hover {
   border-radius: .375rem;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+.appFooter {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
 /*-----End Legal-----*/
+
+/*-----Start WalletType-----*/
+.app {
+  position: relative;
+  height: 89%;
+  overflow-y: auto;
+  max-width: 1000px;
+  margin: auto;
+
+  background-color: rgb(243, 242, 248);
+}
+
+.padded {
+  padding: 0 2rem;
+}
+
+.walletType a {
+  text-decoration: none;
+}
+
+h2.appHeader {
+  text-align: center;
+
+  background-color: white;
+  color: #161c2d;
+  font-weight: 700!important;
+  font-size: 1.3125rem;
+  line-height: 1.4;
+  letter-spacing: -.01em;
+  margin-bottom: .5rem;
+  margin-top: 0;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-weight: 40;
+
+  border-left: 1px solid rgb(243, 242, 248);
+  border-right: 1px solid rgb(243, 242, 248);
+}
+
+.wallets {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 1rem;
+  padding-right: 0;
+  width: calc (100% - 2rem);
+
+  border-radius: .475rem;
+}
+
+.multiCoinWallet {
+  width: calc(100% - 1rem)!important;
+  padding-top: .5rem!important;
+  padding-bottom: .5rem!important;
+}
+
+.CoinWallet {
+  display: table;
+  width: 100%;
+
+  vertical-align: middle;
+}
+.CoinWallet > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.CoinWallet + .CoinWallet .walletName-rArrow {
+  border-top: 1px solid rgb(234, 234, 234);
+}
+
+
+.coinLogoFrame {
+  border-radius: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  width: 50px;
+  border: 1px solid rgb(243, 242, 248);
+  flex: 1;
+}
+
+.coinName {
+  padding-left: 1rem;
+
+  color: #4f5a65!important;
+}
+
+
+.walletName-rArrow {
+  display: table;
+  padding: 1rem 0;
+  padding-right: 1rem;
+  width: calc(100% - 1rem);
+}
+
+.walletName-rArrow > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/*-----End WalletType----*/
+
+/*-----Start PassPhrase-----*/
+.formSection {
+  background-color: white;
+
+  border-radius: .475rem;
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+}
+
+.formSection label {
+  display: block;
+  margin-bottom: .5rem;
+
+  color: rgb(226, 226, 226);
+}
+
+.pass input {
+  border: none;
+  user-select: none;
+  
+}
+
+.pass input:focus-visible {
+  outline: none;
+}
+
+.pass textarea {
+  border: none;
+}
+
+.pass textarea:focus-visible {
+  outline: none;
+}
+
+.pass .explain {
+  padding-left: 1rem;
+  color: rgb(116, 115, 121);
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 4rem);
+
+  text-align: center;
+}
+
+.buttons > * {
+  display: block;
+  margin: auto;
+}
+
+.buttons button {
+  display: block;
+  font-weight: 600;
+  width: fit-content;
+
+  background-color: #0b65c6;
+  border-color: transparent!important;
+
+  margin-top: 2rem!important;
+
+  text-decoration: none;
+  color: white;
+  margin-left: auto!important;
+  margin-right: auto!important;
+
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  border: 1px solid transparent;
+  padding: .8125rem 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  border-radius: .375rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.buttons button:hover {
+  background-color: #0953a2;
+
+}
+
+.buttons a {
+  display: block;
+  margin-top: .25rem!important;
+  color: #0b65c6;
+
+  font-weight: 600;
+
+  margin-left: auto!important;
+  margin-right: auto!important;
+
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  border: 1px solid transparent;
+  padding: .8125rem 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+
+  text-decoration: none;
+}
+/*-----End PassPhrase-----*/
 
 /*-----Start Footer-----*/
 .footer {
@@ -1954,6 +2185,8 @@ a.btnBlueborder:hover {
   /*-----Start Footer-----*/
 }
 
+
+
 @media screen and (max-width: 790px) {
   :root {
     font-size: 12px;
@@ -2182,7 +2415,7 @@ a.btnBlueborder:hover {
 
 
   /*-----Start Login-----*/
-  .login {
+  .login {    
     margin-right: 2rem;
     margin-left: 2rem;
   }
@@ -2190,15 +2423,33 @@ a.btnBlueborder:hover {
   .login .createWallet {
     width: 90%;
   }
-
   /*-----End Login-----*/
 
   /*----Start Legal----*/
   .legal {
     padding: 0 2rem;
   }
-  
+
+  .checkPrompt {
+    margin-top: 80%;
+  }
+
+  .legal .contLogin {
+    width: 90%;
+  }
   /*----End Legal----*/
+
+  /*-----Start WalletType-----*/
+  .coinLogoFrame {
+    width: 40px;
+  }
+  /*-----End WalletType-----*/
+  
+  /*-----Start PassPhrase-----*/
+  .buttons button {
+    width: 100%;
+  }
+  /*-----End Passphrase-----*/
 }
 
 @media screen and (max-width: 440px) {

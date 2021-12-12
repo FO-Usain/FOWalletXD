@@ -51,12 +51,13 @@ const Legal = () => {
                     })
                 }
             </div>
-            <div className="blankFrame"><img src={blankSrc} /></div>
-            <div className="checkPrompt">
-                <span className="checkFrame"><img src={checkBox} onClick={() => updateCheck()} /></span>
-                <p className="prompt">{prompt}</p>
+            <div className="appFooter">
+                <div className="checkPrompt">
+                    <span className="checkFrame"><img src={checkBox} onClick={() => updateCheck()} /></span>
+                    <p className="prompt">{prompt}</p>
+                </div>
+                <Link id="contLogin" className="contLogin" to={"/login/wallets"} onClick={(e) => {if (!checked) {e.preventDefault()}}} >Continue</Link>
             </div>
-            <Link id="contLogin" className="contLogin" to={""} onClick={(e) => {if (!checked) {e.preventDefault()}}} >Continue</Link>
         </div>
     );
 }
